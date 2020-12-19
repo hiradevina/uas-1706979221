@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Youngsil</string>
+    <string name="title">Judul<font fgcolor="red">*</font></string>
+</resources>
