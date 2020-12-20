@@ -7,28 +7,10 @@
     android:id="@+id/addtodo_fragment"
     tools:context=".ui.add_todo.AddTodoFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/addtodo_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:title="Add Todo"
-            app:titleTextColor="@color/white" />
-
-    </com.google.android.material.appbar.AppBarLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_addtodo_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/appBarLayout"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         android:layout_marginTop="16dp">
         <EditText
             android:id="@+id/addtodo_title"
@@ -76,6 +58,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Todo" />
+    <ProgressBar
+        android:id="@+id/addtodo_loading"
+        style="?android:attr/progressBarStyleLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

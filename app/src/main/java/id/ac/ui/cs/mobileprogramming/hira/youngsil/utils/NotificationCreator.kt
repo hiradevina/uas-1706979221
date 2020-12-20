@@ -24,7 +24,9 @@ internal class NotificationCreator(private val mContext: Context, private val to
         val mBuilder: NotificationCompat.Builder =
             NotificationCompat.Builder(mContext, NOTIFICATION_CHANNEL_ID)
         mBuilder.setSmallIcon(R.drawable.ic_dialog_info).setContentTitle("Selamat Pagi")
-            .setContentText("Berikut adalah tugas mu hari ini\n$todos")
+            .setStyle(NotificationCompat.BigTextStyle()
+                .bigText("Berikut adalah tugas mu hari ini\n$todos")
+            )
             .setAutoCancel(false)
             .setContentIntent(pendingIntent)
         val mNotificationManager =

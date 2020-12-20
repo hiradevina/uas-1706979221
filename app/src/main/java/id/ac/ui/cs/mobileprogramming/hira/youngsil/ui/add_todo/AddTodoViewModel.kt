@@ -1,10 +1,10 @@
 package id.ac.ui.cs.mobileprogramming.hira.youngsil.ui.add_todo
 
 import android.util.Log
-import androidx.lifecycle.ViewModel
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import id.ac.ui.cs.mobileprogramming.hira.youngsil.entity.Todo
 import id.ac.ui.cs.mobileprogramming.hira.youngsil.repository.TodoRepository
@@ -12,6 +12,7 @@ import id.ac.ui.cs.mobileprogramming.hira.youngsil.utils.State
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+
 
 class AddTodoViewModel @ViewModelInject constructor(private val todoRepository: TodoRepository) :
     ViewModel() {
@@ -43,11 +44,16 @@ class AddTodoViewModel @ViewModelInject constructor(private val todoRepository: 
         deadline: Long
     ) {
         _insert.value = true
+        _todo.value = State.loading()
         job?.cancel()
         job = viewModelScope.launch(Dispatchers.IO) {
             todoRepository.insertTodo(title, description, deadline)
         }
         Log.d(TAG, "Finish adding todo")
+    }
+
+    fun finishAddingToLocalCalendar() {
+        _todo.value = State.success(null)
     }
 
     fun alreadyPickDeadline() {
