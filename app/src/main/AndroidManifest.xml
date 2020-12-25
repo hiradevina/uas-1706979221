@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.ac.ui.cs.mobileprogramming.hira.youngsil">
+
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
     <application
         android:name=".YoungSilApp"
         android:allowBackup="true"
@@ -11,15 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Youngsil">
-        <activity android:name=".ui.add_todo.AddTodoActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".receiver.NotificationReceiver"/>
+        <activity android:name=".ui.add_todo.AddTodoActivity" />
+        <activity android:name=".MainActivity"/>
+
+        <receiver android:name=".receiver.NotificationReceiver" />
     </application>
 
 </manifest>
