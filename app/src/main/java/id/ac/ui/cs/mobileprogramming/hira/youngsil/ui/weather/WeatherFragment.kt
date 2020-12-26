@@ -6,7 +6,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.location.Location
 import android.net.*
-import android.net.ConnectivityManager.NetworkCallback
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -106,25 +105,6 @@ class WeatherFragment : Fragment() {
             view.context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
         weatherViewModel.updateNetwork(!connectivityManager.isActiveNetworkMetered)
-
-//        val request = NetworkRequest.Builder()
-//        request.addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
-//        request.addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
-//
-//        connectivityManager.requestNetwork(request.build(), object : NetworkCallback() {
-//            override fun onAvailable(network: Network?) {
-//                weatherViewModel.updateNetwork(true)
-//            }
-//
-//            override fun onLost(network: Network?) {
-//                weatherViewModel.updateNetwork(false)
-//            }
-//
-//            override fun onUnavailable() {
-//                super.onUnavailable()
-//                weatherViewModel.updateNetwork(false)
-//            }
-//        })
 
         weatherViewModel.weatherResponse.observe(viewLifecycleOwner) {
             when (it) {

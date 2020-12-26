@@ -48,13 +48,4 @@ class WeatherViewModel @ViewModelInject constructor(private val weatherRepositor
             }
         }
     }
-
-//    private fun getCurrentWeather = viewModelScope.launch {
-//        _weatherResponse.postValue(State.loading())
-//        weatherRepository.getWeather().let {
-//            if (it.isSuccessful) {
-//
-//            }
-//        }
-//    }
 }
