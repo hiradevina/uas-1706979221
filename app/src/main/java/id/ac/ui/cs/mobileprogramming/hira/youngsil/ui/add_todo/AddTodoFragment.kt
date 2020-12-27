@@ -75,7 +75,7 @@ class AddTodoFragment : Fragment(), DatePickerDialog.OnDateSetListener,
             when (it) {
                 is State.Success -> {
                     addtodo_loading.visibility = View.GONE
-                    Toast.makeText(context, "Add todo berhasil", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, getString(R.string.addtodo_success), Toast.LENGTH_LONG).show()
                 }
                 is State.Loading -> showLoading()
 

@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Youngsil</string>
-    <string name="title">Judul<font fgcolor="red">*</font></string>
+    <string name="weather_title">Hello,</string>
+    <string name="addtodo_description">Description</string>
+    <string name="addtodo_deadline">Deadline</string>
+    <string name="addtodo_button">Add Todo</string>
+    <string name="weather_warning_no_connection">No Connection, can\'t get weather and location data</string>
+    <string name="weather_location">Your current location: %1$s</string>
+    <string name="weather_temperature">Current temperature is %1$dF</string>
+    <string name="weather_failed">Weather failed</string>
+    <string name="addtodo_title">Title<font fgcolor="red">*</font></string>
+    <string name="addtodo_success">Add todo success</string>
 </resources>

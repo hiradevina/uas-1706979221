@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Youngsil</string>
+    <string name="addtodo_title">Judul<font fgcolor="red">*</font></string>
+    <string name="weather_title">Halo,</string>
+    <string name="addtodo_description">Deskripsi</string>
+    <string name="addtodo_deadline">Tenggat waktu</string>
+    <string name="addtodo_button">Tambah Todo</string>
+    <string name="weather_warning_no_connection">Tidak ada koneksi, tidak dapat mengambil data cuaca</string>
+    <string name="weather_location">Lokasimu saat ini: %1$s</string>
+    <string name="weather_temperature">Temperatur saat ini %1$dF</string>
+    <string name="weather_failed">Data cuaca gagal</string>
+    <string name="addtodo_success">Tambah todo berhasil</string>
+</resources>

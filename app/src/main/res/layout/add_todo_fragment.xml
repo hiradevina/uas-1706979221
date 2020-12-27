@@ -16,7 +16,7 @@
             android:id="@+id/addtodo_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/title"
+            android:hint="@string/addtodo_title"
             android:layout_marginTop="16dp">
         </EditText>
 
@@ -34,7 +34,7 @@
             android:inputType="textMultiLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description"
+            android:hint="@string/addtodo_description"
             android:layout_marginTop="16dp">
         </EditText>
 
@@ -45,10 +45,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/ic_baseline_date_range_24"
         android:gravity="center"
-        android:text="Deadline"
-        app:layout_constraintTop_toBottomOf="@+id/layout_addtodo_description" />
+        android:text="@string/addtodo_deadline"
+        app:layout_constraintTop_toBottomOf="@+id/layout_addtodo_description"
+        app:drawableLeftCompat="@drawable/ic_baseline_date_range_24" />
 
     <Button
         android:id="@+id/addtodo_submit"
@@ -57,7 +57,7 @@
         android:enabled="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Todo" />
+        android:text="@string/addtodo_button" />
     <ProgressBar
         android:id="@+id/addtodo_loading"
         style="?android:attr/progressBarStyleLarge"

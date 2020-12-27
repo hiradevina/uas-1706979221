@@ -97,7 +97,7 @@ class WeatherFragment : Fragment() {
             if (it) {
                 checkLocationPermission(view.context)
             } else {
-                weather_warning.text = "No Connection, can't get weather and location data"
+                weather_warning.text = getString(R.string.weather_warning_no_connection)
             }
         }
 
@@ -112,14 +112,16 @@ class WeatherFragment : Fragment() {
                     hideLoading()
                     if (it.data != null) {
                         weather_warning.text = ""
-                        weather_location.text = "Your current location: ${it.data.name}"
-                        weather_temperature.text = "Current temperature is ${it.data.main.temp}F"
+                        weather_location.text = getString(R.string.weather_location, it.data.name)
+                        weather_temperature.text =
+                            getString(R.string.weather_temperature, it.data.main.temp)
                     }
                 }
                 is State.Loading -> showLoading()
 
                 is State.Failed -> {
-                    Toast.makeText(context, "Weather failed", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, getString(R.string.weather_failed), Toast.LENGTH_LONG)
+                        .show()
                 }
 
                 is State.Initialize -> hideLoading()
