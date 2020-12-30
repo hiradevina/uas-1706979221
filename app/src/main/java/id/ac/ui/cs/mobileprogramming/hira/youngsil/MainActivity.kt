@@ -61,18 +61,18 @@ class MainActivity : AppCompatActivity() {
         )
         val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
         // testing
-        alarmManager.setExact(
-            AlarmManager.RTC_WAKEUP,
-            System.currentTimeMillis() + 2000,
-            pendingIntent
-        )
-        Log.d(TAG, "Alarm manager set")
-        // production
-//        alarmManager.setRepeating(
+//        alarmManager.setExact(
 //            AlarmManager.RTC_WAKEUP,
-//            calendar.timeInMillis,
-//            AlarmManager.INTERVAL_DAY,
+//            System.currentTimeMillis() + 2000,
 //            pendingIntent
 //        )
+        Log.d(TAG, "Alarm manager set")
+        // production
+        alarmManager.setRepeating(
+            AlarmManager.RTC_WAKEUP,
+            calendar.timeInMillis,
+            AlarmManager.INTERVAL_DAY,
+            pendingIntent
+        )
     }
 }
