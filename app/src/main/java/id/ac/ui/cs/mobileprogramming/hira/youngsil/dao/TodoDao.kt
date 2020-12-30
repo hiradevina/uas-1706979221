@@ -18,7 +18,7 @@ interface TodoDao {
     fun getTodaysTodo(startTime: Long, endTime: Long): List<Todo?>
 
     @Query("SELECT * FROM todo WHERE is_done=0")
-    fun getAllUndoneTodo(): PagingSource<Int, Todo>
+    fun getAllUndoneTodo(): List<Todo?>
 
     @Query("UPDATE todo SET is_done=1 WHERE id = :tid")
     suspend fun updateTodo(tid: String)

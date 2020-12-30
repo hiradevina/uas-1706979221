@@ -23,7 +23,7 @@ class TodoRepository @Inject constructor(private val todoDao: TodoDao) : ITodoRe
         Log.d("TODO REPOSITORY", "done")
     }
 
-    override fun getAllUndoneTodo(): PagingSource<Int, Todo> {
+    override fun getAllUndoneTodo(): List<Todo?> {
         return todoDao.getAllUndoneTodo()
     }
 

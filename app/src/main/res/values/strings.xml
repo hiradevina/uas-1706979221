@@ -6,7 +6,7 @@
     <string name="addtodo_button">Add Todo</string>
     <string name="weather_warning_no_connection">No Connection, can\'t get weather and location data</string>
     <string name="weather_location">Your current location: %1$s</string>
-    <string name="weather_temperature">Current temperature is %1$dF</string>
+    <string name="weather_temperature">Current temperature is %1$fF</string>
     <string name="weather_failed">Weather failed</string>
     <string name="addtodo_title">Title<font fgcolor="red">*</font></string>
     <string name="addtodo_success">Add todo success</string>

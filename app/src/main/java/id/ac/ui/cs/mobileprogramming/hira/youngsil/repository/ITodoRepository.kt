@@ -7,7 +7,7 @@ import id.ac.ui.cs.mobileprogramming.hira.youngsil.entity.Todo
 interface ITodoRepository {
     suspend fun insertTodo(title: String, description:String?, deadline:Long)
 
-    fun getAllUndoneTodo() : PagingSource<Int, Todo>
+    fun getAllUndoneTodo() : List<Todo?>
 
     fun getTodayTodo(): List<Todo?>
 
